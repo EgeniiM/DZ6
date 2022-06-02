@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +11,10 @@ namespace DZ6
         static void Main(string[] args)
         {
             int allImages = 52;
-            int rawImages = 3;
-            int allRaw = (allImages / rawImages);
-            int outImages = (allImages - allRaw * rawImages);
-            Console.WriteLine("Рядов с картинками: {0} оставшиеся картинки: {1}",allRaw , outImages);
+            int imagesInRaw = 3;
+            int allFullRaw = (allImages / imagesInRaw);
+            int outImages = (allImages % imagesInRaw);
+            Console.WriteLine("Рядов с картинками: {0} оставшиеся картинки: {1}",allFullRaw , outImages);
         }
     }
 }
